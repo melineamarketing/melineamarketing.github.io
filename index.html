@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Marketing Digital | Impulsamos tu Marca</title>
+    <!-- Conexión con tipografías de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variables de color y fuentes */
+        :root {
+            --dark-blue: #0B132B;
+            --electric-purple: #5D3FD3;
+            --neon-pink: #FF007F;
+            --light-bg: #F4F7F6;
+            --text-dark: #2D3748;
+            --font-title: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+
+        /* Reset general */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-body); color: var(--text-dark); background-color: #ffffff; line-height: 1.7; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
+
+        /* Header */
+        header { background: #ffffff; padding: 20px 0; border-bottom: 1px solid #edf2f7; position: sticky; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-title); font-size: 24px; font-weight: 800; color: var(--dark-blue); }
+        .logo span { color: var(--electric-purple); }
+
+        /* Sección Hero (Principal) */
+        .hero { padding: 100px 0 80px 0; background: linear-gradient(135deg, #fbfbfe 0%, #f3f0ff 100%); position: relative; overflow: hidden; }
+        .hero-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: var(--font-title); font-size: 46px; font-weight: 800; color: var(--dark-blue); line-height: 1.2; margin-bottom: 25px; }
+        .hero h1 span { background: linear-gradient(to right, var(--electric-purple), var(--neon-pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 19px; color: #4A5568; margin-bottom: 35px; }
+
+        /* Botón de Acción */
+        .btn-cta { display: inline-block; background: linear-gradient(135deg, var(--electric-purple) 0%, #4320af 100%); color: white; padding: 16px 36px; border-radius: 50px; font-family: var(--font-title); font-weight: 700; text-decoration: none; box-shadow: 0 10px 20px rgba(93, 63, 211, 0.2); transition: transform 0.3s, box-shadow 0.3s; }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(93, 63, 211, 0.3); }
+
+        /* Sección de Enfoque / Dolor */
+        .intro-focus { padding: 80px 0; text-align: center; background-color: white; }
+        .intro-focus h2 { font-family: var(--font-title); font-size: 32px; font-weight: 700; color: var(--dark-blue); margin-bottom: 20px; }
+        .intro-focus p { max-width: 700px; margin: 0 auto; font-size: 17px; color: #718096; }
+
+        /* Sección de Servicios */
+        .services { padding: 80px 0; background-color: var(--light-bg); }
+        .services-title { text-align: center; margin-bottom: 50px; }
+        .services-title h2 { font-family: var(--font-title); font-size: 32px; color: var(--dark-blue); }
+        .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .card { background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-icon { font-size: 35px; margin-bottom: 20px; display: inline-block; }
+        .card h3 { font-family: var(--font-title); font-size: 20px; color: var(--dark-blue); margin-bottom: 15px; }
+        .card p { font-size: 15px; color: #4A5568; }
+
+        /* Footer */
+        footer { background: var(--dark-blue); color: #a0aec0; text-align: center; padding: 40px 0; font-size: 14px; border-top: 3px solid var(--electric-purple); }
+        footer p { margin-bottom: 10px; }
+        footer .footer-logo { font-family: var(--font-title); font-weight: 700; color: white; font-size: 18px; }
+
+        /* Adaptabilidad para celulares */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .intro-focus h2, .services-title h2 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <!-- Reemplazá "TuAgencia" por el nombre de tu proyecto cuando lo definas -->
+            <div class="logo">Tu<span>Agencia</span></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Creamos estrategias digitales para que tu negocio <span>no pare de vender</span></h1>
+                <p>No hacemos publicaciones que solo acumulan "me gusta". Diseñamos ecosistemas de contenido estratégicos y soluciones de marca orientadas a resultados reales.</p>
+                <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" class="btn-cta">Hablemos de tu proyecto</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro-focus">
+        <div class="container">
+            <h2>Hacer ruido digital ya no es suficiente</h2>
+            <p>En un entorno donde todos los negocios suben contenido a cada segundo, la clave para destacar no es publicar más, sino publicar de forma inteligente. Nos convertimos en el brazo estratégico de tu marca para transformar visualizaciones en clientes reales.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="services-title">
+                <h2>Cómo podemos ayudarte a crecer</h2>
+            </div>
+            <div class="grid-services">
+                <div class="card">
+                    <span class="card-icon">🎯</span>
+                    <h3>Estrategia de Contenido</h3>
+                    <p>Planificamos calendarios dinámicos y tácticas de comunicación en redes para conectar con tu cliente ideal y vender de forma orgánica y consecuente.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">⚡</span>
+                    <h3>Branding & Identidad</h3>
+                    <p>Diseñamos logotipos, líneas estéticas y manuales de marca con propósitos claros para que tu negocio transmita el valor profesional que realmente tiene.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">📈</span>
+                    <h3>Optimización de Canales</h3>
+                    <p>Estructuramos y pulimos tus perfiles y canales digitales para ramificar tus fuentes de exposición, logrando un alcance mucho más eficiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="footer-logo">TuAgencia © 2026</p>
+            <p>Soluciones estéticas y estratégicas en marketing digital.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
