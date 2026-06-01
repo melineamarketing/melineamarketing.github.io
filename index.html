@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agencia de Marketing Digital | Impulsamos tu Marca</title>
+    <title>Melinea Marketing | Agencia de Marketing Digital</title>
     <!-- Conexión con tipografías de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
         /* Variables de color y fuentes */
@@ -29,13 +29,13 @@
         /* Header */
         header { background: #ffffff; padding: 20px 0; border-bottom: 1px solid #edf2f7; position: sticky; top: 0; z-index: 100; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: var(--font-title); font-size: 24px; font-weight: 800; color: var(--dark-blue); }
+        .logo { font-family: var(--font-title); font-size: 26px; font-weight: 800; color: var(--dark-blue); letter-spacing: -1px; }
         .logo span { color: var(--electric-purple); }
 
-        /* Sección Hero (Principal) */
-        .hero { padding: 100px 0 80px 0; background: linear-gradient(135deg, #fbfbfe 0%, #f3f0ff 100%); position: relative; overflow: hidden; }
-        .hero-content { max-width: 800px; margin: 0 auto; text-align: center; }
-        .hero h1 { font-family: var(--font-title); font-size: 46px; font-weight: 800; color: var(--dark-blue); line-height: 1.2; margin-bottom: 25px; }
+        /* Sección Hero */
+        .hero { padding: 100px 0 80px 0; background: linear-gradient(135deg, #fbfbfe 0%, #f3f0ff 100%); text-align: center; }
+        .hero-content { max-width: 850px; margin: 0 auto; }
+        .hero h1 { font-family: var(--font-title); font-size: 48px; font-weight: 800; color: var(--dark-blue); line-height: 1.2; margin-bottom: 25px; }
         .hero h1 span { background: linear-gradient(to right, var(--electric-purple), var(--neon-pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p { font-size: 19px; color: #4A5568; margin-bottom: 35px; }
 
@@ -43,91 +43,237 @@
         .btn-cta { display: inline-block; background: linear-gradient(135deg, var(--electric-purple) 0%, #4320af 100%); color: white; padding: 16px 36px; border-radius: 50px; font-family: var(--font-title); font-weight: 700; text-decoration: none; box-shadow: 0 10px 20px rgba(93, 63, 211, 0.2); transition: transform 0.3s, box-shadow 0.3s; }
         .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(93, 63, 211, 0.3); }
 
-        /* Sección de Enfoque / Dolor */
-        .intro-focus { padding: 80px 0; text-align: center; background-color: white; }
-        .intro-focus h2 { font-family: var(--font-title); font-size: 32px; font-weight: 700; color: var(--dark-blue); margin-bottom: 20px; }
-        .intro-focus p { max-width: 700px; margin: 0 auto; font-size: 17px; color: #718096; }
-
-        /* Sección de Servicios */
-        .services { padding: 80px 0; background-color: var(--light-bg); }
-        .services-title { text-align: center; margin-bottom: 50px; }
-        .services-title h2 { font-family: var(--font-title); font-size: 32px; color: var(--dark-blue); }
-        .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        /* Servicios */
+        .services { padding: 80px 0; background-color: white; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-family: var(--font-title); font-size: 36px; color: var(--dark-blue); font-weight: 800; }
+        .section-title p { color: #718096; font-size: 17px; margin-top: 10px; }
+        .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         
-        .card { background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card-icon { font-size: 35px; margin-bottom: 20px; display: inline-block; }
-        .card h3 { font-family: var(--font-title); font-size: 20px; color: var(--dark-blue); margin-bottom: 15px; }
-        .card p { font-size: 15px; color: #4A5568; }
+        .service-card { background: var(--light-bg); padding: 30px; border-radius: 15px; border: 1px solid #e2e8f0; transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 30px; margin-bottom: 15px; display: inline-block; }
+        .service-card h3 { font-family: var(--font-title); font-size: 20px; color: var(--dark-blue); margin-bottom: 12px; }
+        .service-card p { font-size: 15px; color: #4A5568; }
+
+        /* Planes de Precios */
+        .pricing { padding: 80px 0; background-color: var(--light-bg); }
+        .grid-pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; align-items: start; }
+        
+        .price-card { background: white; padding: 45px 35px; border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; position: relative; display: flex; flex-direction: column; }
+        .price-card.featured { border: 2px solid var(--electric-purple); box-shadow: 0 15px 35px rgba(93, 63, 211, 0.1); }
+        .badge { position: absolute; top: -15px; right: 25px; background: var(--electric-purple); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-family: var(--font-title); font-weight: 700; }
+        
+        .price-card h3 { font-family: var(--font-title); font-size: 24px; color: var(--dark-blue); margin-bottom: 15px; }
+        .price { font-family: var(--font-title); font-size: 36px; font-weight: 800; color: var(--dark-blue); margin-bottom: 25px; }
+        .price span { font-size: 16px; font-weight: 400; color: #718096; }
+        
+        .features-list { list-style: none; margin-bottom: 35px; flex-grow: 1; }
+        .features-list li { margin-bottom: 12px; font-size: 15px; color: #4A5568; display: flex; align-items: center; }
+        .features-list li::before { content: "✓"; color: #38A169; font-weight: bold; margin-right: 10px; font-size: 16px; }
+
+        .btn-price { display: block; text-align: center; background: #EDF2F7; color: var(--dark-blue); padding: 14px; border-radius: 50px; font-family: var(--font-title); font-weight: 700; text-decoration: none; transition: background 0.3s, color 0.3s; }
+        .btn-price:hover { background: var(--dark-blue); color: white; }
+        .price-card.featured .btn-price { background: var(--electric-purple); color: white; }
+        .price-card.featured .btn-price:hover { background: linear-gradient(135deg, var(--electric-purple) 0%, var(--neon-pink) 100%); }
+
+        /* Condiciones de Trabajo */
+        .conditions { padding: 80px 0; background-color: white; }
+        .conditions-content { max-width: 850px; margin: 0 auto; }
+        .conditions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
+        .cond-item { margin-bottom: 20px; }
+        .cond-item h4 { font-family: var(--font-title); font-size: 18px; color: var(--dark-blue); margin-bottom: 8px; display: flex; align-items: center; }
+        .cond-item h4::before { content: "▪"; color: var(--neon-pink); font-size: 24px; margin-right: 10px; line-height: 1; }
+        .cond-item p { font-size: 15px; color: #4A5568; padding-left: 18px; }
+
+        /* Contacto */
+        .contact { padding: 80px 0; background: linear-gradient(135deg, var(--dark-blue) 0%, #1A202C 100%); color: white; text-align: center; }
+        .contact h2 { font-family: var(--font-title); font-size: 36px; margin-bottom: 15px; font-weight: 800; }
+        .contact p { color: #A0AEC0; font-size: 18px; max-width: 600px; margin: 0 auto 35px auto; }
+        .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn-social { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.1); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-family: var(--font-title); font-weight: 600; transition: background 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); }
+        .btn-social:hover { background: white; color: var(--dark-blue); }
 
         /* Footer */
-        footer { background: var(--dark-blue); color: #a0aec0; text-align: center; padding: 40px 0; font-size: 14px; border-top: 3px solid var(--electric-purple); }
-        footer p { margin-bottom: 10px; }
-        footer .footer-logo { font-family: var(--font-title); font-weight: 700; color: white; font-size: 18px; }
+        footer { background: #070C19; color: #718096; text-align: center; padding: 30px 0; font-size: 14px; border-top: 1px solid #1A202C; }
 
-        /* Adaptabilidad para celulares */
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .hero p { font-size: 16px; }
-            .intro-focus h2, .services-title h2 { font-size: 26px; }
+            .hero h1 { font-size: 34px; }
+            .section-title h2 { font-size: 28px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header / Barra de Navegación -->
     <header>
         <div class="container nav-container">
-            <!-- Reemplazá "TuAgencia" por el nombre de tu proyecto cuando lo definas -->
-            <div class="logo">Tu<span>Agencia</span></div>
+            <div class="logo">Melinea<span>Marketing</span></div>
         </div>
     </header>
 
+    <!-- Sección Hero Principal -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Creamos estrategias digitales para que tu negocio <span>no pare de vender</span></h1>
-                <p>No hacemos publicaciones que solo acumulan "me gusta". Diseñamos ecosistemas de contenido estratégicos y soluciones de marca orientadas a resultados reales.</p>
-                <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" class="btn-cta">Hablemos de tu proyecto</a>
+                <h1>Donde la pasión se encuentra con tu <span>audiencia ideal</span></h1>
+                <p>Estructuramos, optimizamos y potenciamos los perfiles digitales de tu negocio. No acumulamos interacciones vacías: desarrollamos ecosistemas de contenido alineados para vender.</p>
+                <a href="https://wa.me/5493537316946" target="_blank" class="btn-cta">Hablemos de tu proyecto</a>
             </div>
         </div>
     </section>
 
-    <section class="intro-focus">
-        <div class="container">
-            <h2>Hacer ruido digital ya no es suficiente</h2>
-            <p>En un entorno donde todos los negocios suben contenido a cada segundo, la clave para destacar no es publicar más, sino publicar de forma inteligente. Nos convertimos en el brazo estratégico de tu marca para transformar visualizaciones en clientes reales.</p>
-        </div>
-    </section>
-
+    <!-- Sección de Servicios Específicos -->
     <section class="services">
         <div class="container">
-            <div class="services-title">
-                <h2>Cómo podemos ayudarte a crecer</h2>
+            <div class="section-title">
+                <h2>Soluciones Estratégicas</h2>
+                <p>Desarrollo integral para optimizar y ramificar la presencia digital de tu marca.</p>
             </div>
             <div class="grid-services">
-                <div class="card">
-                    <span class="card-icon">🎯</span>
-                    <h3>Estrategia de Contenido</h3>
-                    <p>Planificamos calendarios dinámicos y tácticas de comunicación en redes para conectar con tu cliente ideal y vender de forma orgánica y consecuente.</p>
-                </div>
-                <div class="card">
-                    <span class="card-icon">⚡</span>
+                <div class="service-card">
+                    <span class="service-icon">🎨</span>
                     <h3>Branding & Identidad</h3>
-                    <p>Diseñamos logotipos, líneas estéticas y manuales de marca con propósitos claros para que tu negocio transmita el valor profesional que realmente tiene.</p>
+                    <p>Diseño de logotipos, paletas cromáticas y tipografías con propósito claro para transmitir el valor real de tu negocio.</p>
                 </div>
-                <div class="card">
-                    <span class="card-icon">📈</span>
-                    <h3>Optimización de Canales</h3>
-                    <p>Estructuramos y pulimos tus perfiles y canales digitales para ramificar tus fuentes de exposición, logrando un alcance mucho más eficiente.</p>
+                <div class="service-card">
+                    <span class="service-icon">⚡</span>
+                    <h3>Estrategias de Contenido</h3>
+                    <p>Planificación de calendarios dinámicos y tácticas comunicacionales que atraen al cliente ideal de forma orgánica.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">📣</span>
+                    <h3>Community Management</h3>
+                    <p>Gestión proactiva de comunidades, moderación diaria de consultas y optimización de flujos conversacionales.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🚀</span>
+                    <h3>Meta Ads (Campañas Pagas)</h3>
+                    <p>Configuración, monitoreo técnico y optimización de pauta publicitaria en Instagram y Facebook para potenciar tu alcance.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">💬</span>
+                    <h3>WhatsApp Business</h3>
+                    <p>Puesta a punto corporativa y optimización del principal canal de cierre de ventas directas.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">📈</span>
+                    <h3>Lectura de Métricas</h3>
+                    <p>Análisis exhaustivo de insights e informes detallados de rendimiento para aplicar mejoras continuas basadas en datos.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Sección de Planes y Precios -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Planes y Propuestas</h2>
+                <p>Opciones escalables adaptadas a los objetivos de crecimiento de tu empresa.</p>
+            </div>
+            <div class="grid-pricing">
+                
+                <!-- Plan Básico -->
+                <div class="price-card">
+                    <h3>Plan Básico</h3>
+                    <div class="price">$250.000 <span>/ mensual</span></div>
+                    <ul class="features-list">
+                        <li>Branding Express (Logo, paleta y tipografía básica)</li>
+                        <li>Configuración de perfiles (IG, FB, WA Business)</li>
+                        <li>Diseño gráfico básico (8-10 piezas mensuales)</li>
+                        <li>Gestión de contenido y calendario básico</li>
+                        <li>Community Management (Moderación inicial)</li>
+                        <li>Reporte mensual simple de métricas clave</li>
+                    </ul>
+                    <a href="https://wa.me/5493537316946?text=Hola%20Melina!%20Me%20interesa%20el%20Plan%20B%C3%A1sico" target="_blank" class="btn-price">Contratar Plan</a>
+                </div>
+
+                <!-- Plan Estándar (Destacado) -->
+                <div class="price-card featured">
+                    <div class="badge">Recomendado</div>
+                    <h3>Plan Estándar</h3>
+                    <div class="price">$430.900 <span>/ mensual</span></div>
+                    <ul class="features-list">
+                        <li>Branding Integral con manual de marca detallado</li>
+                        <li>Estrategia de contenido avanzada (15-20 publicaciones)</li>
+                        <li>Diseño gráfico avanzado enfocado en conversión</li>
+                        <li>Community Management activo e interacción fluida</li>
+                        <li>Meta Ads (Configuración y optimización de 1 campaña)</li>
+                        <li>Edición de hasta 2 Reels/videos cortos mensuales</li>
+                        <li>Análisis profundo de insights y reporte detallado</li>
+                    </ul>
+                    <a href="https://wa.me/5493537316946?text=Hola%20Melina!%20Me%20interesa%20el%20Plan%20Est%C3%A1ndar" target="_blank" class="btn-price">Contratar Plan</a>
+                </div>
+
+                <!-- Plan Premium -->
+                <div class="price-card">
+                    <h3>Plan Premium</h3>
+                    <div class="price">$690.900 <span>/ mensual</span></div>
+                    <ul class="features-list">
+                        <li>Estrategia Digital 360° e integración comercial</li>
+                        <li>Gestión total de identidad y creación gráfica ilimitada</li>
+                        <li>Asesoría y edición de hasta 4 Reels avanzados mensuales</li>
+                        <li>Community Management PRO con resolución de dudas</li>
+                        <li>Meta Ads (Optimización de hasta 3 campañas en simultáneo)</li>
+                        <li>Manejo básico de contenido y secciones en Página Web</li>
+                        <li>Reportes de performance avanzados y reuniones estratégicas</li>
+                        <li>Soporte prioritario constante</li>
+                    </ul>
+                    <a href="https://wa.me/5493537316946?text=Hola%20Melina!%20Me%20interesa%20el%20Plan%20Premium" target="_blank" class="btn-price">Contratar Plan</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Normas y Condiciones de Trabajo -->
+    <section class="conditions">
+        <div class="container">
+            <div class="conditions-content">
+                <div class="section-title">
+                    <h2>Condiciones Operativas</h2>
+                    <p>Transparencia mutua y pautas claras para el desarrollo óptimo de los servicios comerciales.</p>
+                </div>
+                <div class="conditions-grid">
+                    <div class="cond-item">
+                        <h4>Inversión en Publicidad</h4>
+                        <p>El valor mensual de los planes cubre los honorarios profesionales de gestión de campañas. La inversión de presupuesto directo en pauta publicitaria (Meta Ads) corre a cargo del cliente mediante su propia cuenta de anuncios.</p>
+                    </div>
+                    <div class="cond-item">
+                        <h4>Esquema de Pagos y Demoras</h4>
+                        <p>Los abonos mensuales se cancelan por adelantado dentro de los primeros 10 días de cada mes. Retrasos superiores a 15 días desde el vencimiento darán lugar a la suspensión temporal de los servicios informáticos y de publicación.</p>
+                    </div>
+                    <div class="cond-item">
+                        <h4>Alineación y Comunicación</h4>
+                        <p>Se coordina una sesión inicial obligatoria para delimitar objetivos de negocio y manuales de estilo. Las solicitudes comerciales de cambios se procesarán de lunes a viernes entre las 9:00 am y las 18:00 pm (Hora Argentina).</p>
+                    </div>
+                    <div class="cond-item">
+                        <h4>Revisión y Entregas de Material</h4>
+                        <p>Las propuestas de grillas mensuales se envían con 5 días hábiles de anticipación, disponiendo el cliente de 48 horas hábiles para enviar correcciones. El crudo gráfico o audiovisual debe ser remitido por la marca antes del día 25 de cada mes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto Directo -->
+    <section class="contact">
+        <div class="container">
+            <h2>¿Listo para impulsar tu presencia digital?</h2>
+            <p>Ponete en contacto directo con la agencia y empecemos a planificar la estrategia ideal para tu modelo de negocio.</p>
+            <div class="contact-links">
+                <a href="https://wa.me/5493537316946" target="_blank" class="btn-social">💬 Escribir por WhatsApp</a>
+                <a href="https://instagram.com/melinea_marketingok" target="_blank" class="btn-social">📸 Instagram (@melinea_marketingok)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="footer-logo">TuAgencia © 2026</p>
-            <p>Soluciones estéticas y estratégicas en marketing digital.</p>
+            <p>&copy; 2026 Melinea Marketing. Desarrollos estratégicos y de marca. Bell Ville, Córdoba, Argentina.</p>
         </div>
     </footer>
 
