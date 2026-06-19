@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melinea Marketing | Agencia de Marketing Digital</title>
-    <!-- Conexión con tipografías de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -50,18 +49,40 @@
         .section-title p { color: #718096; font-size: 17px; margin-top: 10px; }
         .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         
-        .service-card { background: var(--light-bg); padding: 30px; border-radius: 15px; border: 1px solid #e2e8f0; transition: transform 0.3s; }
-        .service-card:hover { transform: translateY(-5px); }
+        .service-card { background: var(--light-bg); padding: 30px; border-radius: 15px; border: 1px solid #e2e8f0; transition: transform 0.3s, box-shadow 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(93, 63, 211, 0.05); }
         .service-icon { font-size: 30px; margin-bottom: 15px; display: inline-block; }
         .service-card h3 { font-family: var(--font-title); font-size: 20px; color: var(--dark-blue); margin-bottom: 12px; }
         .service-card p { font-size: 15px; color: #4A5568; }
+
+        /* Nueva Sección de Proyectos y Métricas */
+        .portfolio { padding: 80px 0; background-color: #ffffff; border-top: 1px solid #e2e8f0; }
+        .filter-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+        .btn-filter { background: var(--light-bg); border: none; color: var(--text-dark); padding: 10px 24px; border-radius: 30px; font-family: var(--font-title); font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.3s; }
+        .btn-filter.active, .btn-filter:hover { background: var(--electric-purple); color: white; box-shadow: 0 5px 15px rgba(93, 63, 211, 0.2); }
+        .grid-portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+        .portfolio-card { background: #ffffff; border-radius: 20px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s, box-shadow 0.3s; }
+        .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(11, 19, 43, 0.08); }
+        .portfolio-info { padding: 30px; }
+        .portfolio-tag { display: inline-block; background: rgba(93, 63, 211, 0.1); color: var(--electric-purple); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-family: var(--font-title); font-weight: 700; margin-bottom: 15px; }
+        .portfolio-card h3 { font-family: var(--font-title); font-size: 22px; color: var(--dark-blue); margin-bottom: 10px; }
+        .portfolio-card p { font-size: 14px; color: #718096; margin-bottom: 20px; }
+        .metrics-box { background: var(--light-bg); border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 4px solid var(--neon-pink); }
+        .metric-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; }
+        .metric-row:last-child { margin-bottom: 0; }
+        .metric-label { font-weight: 600; color: var(--dark-blue); }
+        .metric-value { font-weight: 700; color: var(--neon-pink); font-family: var(--font-title); }
+        .btn-view-report { display: block; text-align: center; background: var(--dark-blue); color: white; padding: 12px; border-radius: 50px; font-family: var(--font-title); font-weight: 700; font-size: 14px; text-decoration: none; transition: background 0.3s; }
+        .btn-view-report:hover { background: linear-gradient(135deg, var(--electric-purple) 0%, var(--neon-pink) 100%); }
 
         /* Planes de Precios */
         .pricing { padding: 80px 0; background-color: var(--light-bg); }
         .grid-pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; align-items: start; }
         
-        .price-card { background: white; padding: 45px 35px; border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; position: relative; display: flex; flex-direction: column; }
+        .price-card { background: white; padding: 45px 35px; border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; position: relative; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s; }
+        .price-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
         .price-card.featured { border: 2px solid var(--electric-purple); box-shadow: 0 15px 35px rgba(93, 63, 211, 0.1); }
+        .price-card.featured:hover { box-shadow: 0 20px 40px rgba(93, 63, 211, 0.18); }
         .badge { position: absolute; top: -15px; right: 25px; background: var(--electric-purple); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-family: var(--font-title); font-weight: 700; }
         
         .price-card h3 { font-family: var(--font-title); font-size: 24px; color: var(--dark-blue); margin-bottom: 15px; }
@@ -72,7 +93,7 @@
         .features-list li { margin-bottom: 12px; font-size: 15px; color: #4A5568; display: flex; align-items: center; }
         .features-list li::before { content: "✓"; color: #38A169; font-weight: bold; margin-right: 10px; font-size: 16px; }
 
-        .btn-price { display: block; text-align: center; background: #EDF2F7; color: var(--dark-blue); padding: 14px; border-radius: 50px; font-family: var(--font-title); font-weight: 700; text-decoration: none; transition: background 0.3s, color 0.3s; }
+        .btn-price { display: block; text-align: center; background: #EDF2F7; color: var(--dark-blue); padding: 14px; border-radius: 50px; font-family: var(--font-title); font-weight: 700; text-decoration: none; border: none; width: 100%; cursor: pointer; transition: background 0.3s, color 0.3s; }
         .btn-price:hover { background: var(--dark-blue); color: white; }
         .price-card.featured .btn-price { background: var(--electric-purple); color: white; }
         .price-card.featured .btn-price:hover { background: linear-gradient(135deg, var(--electric-purple) 0%, var(--neon-pink) 100%); }
@@ -94,6 +115,20 @@
         .btn-social { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.1); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-family: var(--font-title); font-weight: 600; transition: background 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); }
         .btn-social:hover { background: white; color: var(--dark-blue); }
 
+        /* Ventana Emergente Pop-up Formulario */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 19, 43, 0.8); backdrop-filter: blur(5px); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        .modal-box { background: #ffffff; padding: 40px; border-radius: 24px; max-width: 500px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); position: relative; transform: translateY(-20px); transition: transform 0.3s ease; }
+        .modal-overlay.active .modal-box { transform: translateY(0); }
+        .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 24px; color: #718096; cursor: pointer; }
+        .modal-box h3 { font-family: var(--font-title); font-size: 24px; color: var(--dark-blue); margin-bottom: 10px; }
+        .modal-box p { font-size: 14px; color: #4A5568; margin-bottom: 25px; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; font-family: var(--font-title); font-weight: 600; font-size: 14px; color: var(--dark-blue); margin-bottom: 8px; }
+        .form-group input { width: 100%; padding: 12px 18px; border: 1px solid #e2e8f0; border-radius: 30px; font-family: var(--font-body); font-size: 15px; color: var(--text-dark); outline: none; transition: border-color 0.3s; }
+        .form-group input:focus { border-color: var(--electric-purple); }
+        .btn-submit-checkout { display: block; width: 100%; text-align: center; background: linear-gradient(135deg, var(--electric-purple) 0%, var(--neon-pink) 100%); color: white; padding: 14px; border-radius: 50px; font-family: var(--font-title); font-weight: 700; font-size: 16px; text-decoration: none; border: none; cursor: pointer; box-shadow: 0 5px 15px rgba(93, 63, 211, 0.2); }
+        
         /* Footer */
         footer { background: #070C19; color: #718096; text-align: center; padding: 30px 0; font-size: 14px; border-top: 1px solid #1A202C; }
 
@@ -101,19 +136,18 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 34px; }
             .section-title h2 { font-size: 28px; }
+            .filter-container { flex-wrap: wrap; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Barra de Navegación -->
     <header>
         <div class="container nav-container">
             <div class="logo">Melinea<span>Marketing</span></div>
         </div>
     </header>
 
-    <!-- Sección Hero Principal -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -124,7 +158,6 @@
         </div>
     </section>
 
-    <!-- Sección de Servicios Específicos -->
     <section class="services">
         <div class="container">
             <div class="section-title">
@@ -166,7 +199,71 @@
         </div>
     </section>
 
-    <!-- Sección de Planes y Precios -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Casos de Éxito</h2>
+                <p>Monitoreo en tiempo real de las estrategias que impulsan las marcas de nuestra agencia.</p>
+            </div>
+            
+            <div class="filter-container">
+                <button class="btn-filter" onclick="updateMetrics('7d', this)">Últimos 7 días</button>
+                <button class="btn-filter active" onclick="updateMetrics('30d', this)">Últimos 30 días</button>
+                <button class="btn-filter" onclick="updateMetrics('hist', this)">Histórico Completo</button>
+            </div>
+
+            <div class="grid-portfolio">
+                <div class="portfolio-card">
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Psicología & Contenido Visual</span>
+                        <h3>Desarrollo de Comunidad | Bienestar Emocional</h3>
+                        <p>Estrategia disruptiva cruzando tópicos emocionales y cultura pop para optimizar la retención y alcance orgánico.</p>
+                        
+                        <div class="metrics-box">
+                            <div class="metric-row">
+                                <span class="metric-label">Crecimiento de Comunidad:</span>
+                                <span class="metric-value" id="m1-followers">+18.4%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Reproducciones Orgánicas:</span>
+                                <span class="metric-value" id="m1-views">+142K</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Retención Promedio:</span>
+                                <span class="metric-value" id="m1-retention">68%</span>
+                            </div>
+                        </div>
+                        <a href="https://lookerstudio.google.com/" target="_blank" class="btn-view-report">Ver Reporte Detallado en Vivo</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Ecosistema Audiovisual</span>
+                        <h3>Canal de Producción Musical & Relax</h3>
+                        <p>Estructuración técnica de loops visuales y sonido de alta fidelidad optimizados bajo los parámetros algorítmicos actuales.</p>
+                        
+                        <div class="metrics-box">
+                            <div class="metric-row">
+                                <span class="metric-label">Minutos de Reproducción:</span>
+                                <span class="metric-value" id="m2-followers">+94K min</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Impresiones del Canal:</span>
+                                <span class="metric-value" id="m2-views">+58K</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Interacciones Positivas:</span>
+                                <span class="metric-value" id="m2-retention">98.2%</span>
+                            </div>
+                        </div>
+                        <a href="https://lookerstudio.google.com/" target="_blank" class="btn-view-report">Ver Reporte Detallado en Vivo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="pricing">
         <div class="container">
             <div class="section-title">
@@ -175,7 +272,6 @@
             </div>
             <div class="grid-pricing">
                 
-                <!-- Plan Básico -->
                 <div class="price-card">
                     <h3>Plan Básico</h3>
                     <div class="price">$250.000 <span>/ mensual</span></div>
@@ -187,10 +283,9 @@
                         <li>Community Management (Moderación inicial)</li>
                         <li>Reporte mensual simple de métricas clave</li>
                     </ul>
-                    <a href="https://wa.me/5493537316946?text=Hola%20Melina!%20Me%20interesa%20el%20Plan%20B%C3%A1sico" target="_blank" class="btn-price">Contratar Plan</a>
+                    <button class="btn-price" onclick="openModal('Plan Básico')">Contratar Plan</button>
                 </div>
 
-                <!-- Plan Estándar (Destacado) -->
                 <div class="price-card featured">
                     <div class="badge">Recomendado</div>
                     <h3>Plan Estándar</h3>
@@ -204,10 +299,9 @@
                         <li>Edición de hasta 2 Reels/videos cortos mensuales</li>
                         <li>Análisis profundo de insights y reporte detallado</li>
                     </ul>
-                    <a href="https://wa.me/5493537316946?text=Hola%20Melina!%20Me%20interesa%20el%20Plan%20Est%C3%A1ndar" target="_blank" class="btn-price">Contratar Plan</a>
+                    <button class="btn-price" onclick="openModal('Plan Estándar')">Contratar Plan</button>
                 </div>
 
-                <!-- Plan Premium -->
                 <div class="price-card">
                     <h3>Plan Premium</h3>
                     <div class="price">$690.900 <span>/ mensual</span></div>
@@ -221,14 +315,13 @@
                         <li>Reportes de performance avanzados y reuniones estratégicas</li>
                         <li>Soporte prioritario constante</li>
                     </ul>
-                    <a href="https://wa.me/5493537316946?text=Hola%20Melina!%20Me%20interesa%20el%20Plan%20Premium" target="_blank" class="btn-price">Contratar Plan</a>
+                    <button class="btn-price" onclick="openModal('Plan Premium')">Contratar Plan</button>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Sección de Normas y Condiciones de Trabajo -->
     <section class="conditions">
         <div class="container">
             <div class="conditions-content">
@@ -258,7 +351,6 @@
         </div>
     </section>
 
-    <!-- Sección de Contacto Directo -->
     <section class="contact">
         <div class="container">
             <h2>¿Listo para impulsar tu presencia digital?</h2>
@@ -270,12 +362,98 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <div class="modal-overlay" id="subscriptionModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h3 id="modalPlanTitle">Suscribirse al Plan</h3>
+            <p>Por favor, ingresá tus datos comerciales. Al hacer clic en continuar, habilitaremos la pasarela segura para el débito mensual automático.</p>
+            
+            <form id="checkoutForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="clientName">Nombre Completo / Empresa</label>
+                    <input type="text" id="clientName" required placeholder="Ej. Juan Pérez o Marca SRL">
+                </div>
+                <div class="form-group">
+                    <label for="clientEmail">Correo Electrónico</label>
+                    <input type="email" id="clientEmail" required placeholder="ejemplo@correo.com">
+                </div>
+                <div class="form-group">
+                    <label for="clientWhatsApp">Número de WhatsApp</label>
+                    <input type="tel" id="clientWhatsApp" required placeholder="Ej. +54 9 353 7000000">
+                </div>
+                
+                <button type="submit" class="btn-submit-checkout">Confirmar y Abonar Suscripción</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
-            <p>&copy; 2026 Melinea Marketing. Desarrollos estratégicos y de marca. Bell Ville, Córdoba, Argentina.</p>
+            <p>&copy; 2026 Melinea Marketing. Desarrollos estratégicos y de marca. Córdoba, Argentina.</p>
         </div>
     </footer>
+
+    <script>
+        // Función para cambiar los datos del Portafolio de forma interactiva
+        function updateMetrics(period, button) {
+            // Cambiar clase activa en botones
+            document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Contenedores de datos
+            const m1Followers = document.getElementById('m1-followers');
+            const m1Views = document.getElementById('m1-views');
+            const m1Retention = document.getElementById('m1-retention');
+
+            const m2Followers = document.getElementById('m2-followers');
+            const m2Views = document.getElementById('m2-views');
+            const m2Retention = document.getElementById('m2-retention');
+
+            // Asignación de datos ficticios pero dinámicos según el período elegido
+            if (period === '7d') {
+                m1Followers.innerText = '+4.2%'; m1Views.innerText = '+29K'; m1Retention.innerText = '71%';
+                m2Followers.innerText = '+19K min'; m2Views.innerText = '+11K'; m2Retention.innerText = '99.1%';
+            } else if (period === '30d') {
+                m1Followers.innerText = '+18.4%'; m1Views.innerText = '+142K'; m1Retention.innerText = '68%';
+                m2Followers.innerText = '+94K min'; m2Views.innerText = '+58K'; m2Retention.innerText = '98.2%';
+            } else if (period === 'hist') {
+                m1Followers.innerText = '+145%'; m1Views.innerText = '+1.2M'; m1Retention.innerText = '64%';
+                m2Followers.innerText = '+820K min'; m2Views.innerText = '+490K'; m2Retention.innerText = '96.7%';
+            }
+        }
+
+        // Funciones para manejar la Ventana Pop-up
+        const modal = document.getElementById('subscriptionModal');
+        const modalTitle = document.getElementById('modalPlanTitle');
+
+        function openModal(planName) {
+            modalTitle.innerText = `Suscribirse al ${planName}`;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.getElementById('checkoutForm').reset();
+        }
+
+        // Cerrar al hacer clic fuera de la caja blanca
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+
+        // Simulación de envío de datos y enlace a pasarela de pago (Mercado Pago / Hotmart)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('clientName').value;
+            const plan = modalTitle.innerText;
+
+            alert(`¡Gracias ${name}! Procesando tu solicitud para el ${plan}.\nAhora te redirigiremos a la pasarela de pago segura para activar tu débito mensual automático.`);
+            
+            // Reemplazar este enlace por tu Link de Suscripción recurrente real de Mercado Pago o Hotmart Checkout
+            window.location.href = "https://www.mercadopago.com.ar/"; 
+        }
+    </script>
 
 </body>
 </html>
